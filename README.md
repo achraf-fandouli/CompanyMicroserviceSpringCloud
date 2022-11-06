@@ -5,4 +5,4 @@ Architecture distribuée basée sur Micro Services avec Spring Cloud:
   - Eureka Registration Service
   - Partie Service api gateway
   
-  NB: le dossier contient la confiruration globale des microservices nommé "cloud-conf" doit etre placé sour le dosier utilisateur. 
+  NB: le dossier contient la confiruration globale des microservices nommé "cloud-conf" doit etre placer sour le dosier utilisateur. 
