@@ -1,0 +1,39 @@
+server:
+  port: 8087
+
+eureka:
+  instance:
+    hostname: localhost
+    non-secure-port: 8761
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.non-secure-port}/eureka/
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOriginPatterns: "*"
+            allowedMethods:
+            - GET
+            - POST
+            - DELETE
+            - PATCH
+            - PUT
+            - HEAD
+            - OPTIONS
+            allowed-headers:
+            - Authorization
+            - Content-Type
+            - x-requested-with
+            max-age: 3600
